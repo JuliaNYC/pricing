@@ -1,0 +1,11 @@
+.pricing-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .pricing-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f9ff;
+    margin: 5px;
+  }
+}
