@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {content} from '../mockdata/pricingContent';
 import PricingBox from './PricingBox';
 
 const PricingGallery = () => {
-
+    const [featuresToShow] = useState(5);
     const renderPricingBoxes = content.map(box => {
         return <PricingBox
             key={box.id}
@@ -11,6 +11,7 @@ const PricingGallery = () => {
             level={box.level}
             CTAText={box.CTAText}
             featuresList={box.featuresList}
+            featuresToShow={featuresToShow}
         />
     });
 

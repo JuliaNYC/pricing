@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 .app {
   .pricing-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 80%;
+    justify-content: center;
+    margin: 50px auto;
     font-family: 'Roboto', sans-serif;
+    @media only screen and (min-width: 48em) {
+      justify-content: space-between;
+      width: 80%;
+    }
     .pricing-box {
       display: flex;
       flex-direction: column;
@@ -17,12 +21,14 @@
       border-radius: 5px;
       width: 400px;
       height: 100%;
+
       .level {
         background: #1c1e38;
         width: 100%;
         text-align: center;
         color: white;
       }
+
       .cta-text-button {
         padding: 15px;
         border-radius: 5px;
@@ -30,8 +36,23 @@
         border: none;
         width: 140px;
       }
-      .features-list {
 
+      .features-list {
+        list-style-type: none;
+
+        .feature-item {
+          svg {
+            padding-right: 10px;
+            padding-top: 15px;
+          }
+        }
+      }
+
+      .read-more-button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 1em;
       }
     }
   }

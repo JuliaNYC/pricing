@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
+import { FaAngleDoubleDown, FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
 
 const PricingBox = ({id, level, CTAText, featuresList, featuresToShow}) => {
     const [readMore, setReadMore] = useState(false);
 
     const renderFeaturesList = (readMore ? featuresList
-        : featuresList.slice(0, featuresToShow)).map((feature, index) => <li key={id + index} className="feature-item">{feature}</li>);
+        : featuresList.slice(0, featuresToShow)).map((feature, index) => <li key={id + index} className="feature-item"><FaRegCheckCircle />{feature}</li>);
 
     const showMoreFeatures = () => {
         if (featuresList.length > featuresToShow) {
